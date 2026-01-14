@@ -46,16 +46,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Client Dash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Client Dash.Designer.cs">
+      <DependentUpon>Client Dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Dash.Designer.cs">
+      <DependentUpon>Employee Dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr Dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr Dash.Designer.cs">
+      <DependentUpon>Hr Dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log in.Designer.cs">
+      <DependentUpon>Log in.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Register employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register employee.Designer.cs">
+      <DependentUpon>Register employee.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Client Dash.resx">
+      <DependentUpon>Client Dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Dash.resx">
+      <DependentUpon>Employee Dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr Dash.resx">
+      <DependentUpon>Hr Dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log in.resx">
+      <DependentUpon>Log in.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Register employee.resx">
+      <DependentUpon>Register employee.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
