@@ -120,6 +120,9 @@
     <EmbeddedResource Include="Client\Make Order.resx">
       <DependentUpon>Make Order.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Application.resx">
+      <DependentUpon>Application.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee\Employee Dash.resx">
       <DependentUpon>Employee Dash.cs</DependentUpon>
     </EmbeddedResource>
