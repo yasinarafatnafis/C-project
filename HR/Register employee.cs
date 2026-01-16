@@ -16,5 +16,28 @@ namespace C__project
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.Owner != null && !this.Owner.IsDisposed)
+            {
+                try
+                {
+                    this.Owner.Show();
+                    this.Owner.BringToFront();
+                }
+                catch
+                {
+                    // ignore any error restoring owner
+                }
+            }
+
+            this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
