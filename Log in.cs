@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C__project
+namespace C__project.HR
 {
     public partial class Log_in : Form
     {

@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="HR\Hr Dash.Designer.cs">
       <DependentUpon>Hr Dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\UC_RegisterEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HR\UC_RegisterEmployee.Designer.cs">
+      <DependentUpon>UC_RegisterEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Log in.cs">
       <SubType>Form</SubType>
@@ -129,6 +141,9 @@
     <EmbeddedResource Include="HR\Hr Dash.resx">
       <DependentUpon>Hr Dash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HR\UC_RegisterEmployee.resx">
+      <DependentUpon>UC_RegisterEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Log in.resx">
       <DependentUpon>Log in.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +168,7 @@
     <EmbeddedResource Include="HR\View Order.resx">
       <DependentUpon>View Order.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

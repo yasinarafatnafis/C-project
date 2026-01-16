@@ -17,25 +17,28 @@ namespace C__project
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Register_employee_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (this.Owner != null && !this.Owner.IsDisposed)
-            {
-                try
-                {
-                    this.Owner.Show();
-                    this.Owner.BringToFront();
-                }
-                catch
-                {
-                    // ignore any error restoring owner
-                }
-            }
-
-            this.Close();
+            Application.OpenForms["Hr_Dash"]?.Show();
         }
 
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Register_employee_Load(object sender, EventArgs e)
         {
 
         }

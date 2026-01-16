@@ -1,4 +1,4 @@
-﻿namespace C__project
+﻿namespace C__project.HR
 {
     partial class Log_in
     {

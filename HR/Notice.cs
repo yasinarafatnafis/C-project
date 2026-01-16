@@ -17,22 +17,11 @@ namespace C__project
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void notice_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (this.Owner != null && !this.Owner.IsDisposed)
-            {
-                try
-                {
-                    this.Owner.Show();
-                    this.Owner.BringToFront();
-                }
-                catch
-                {
-                    // ignore any error restoring owner
-                }
-            }
-
-            this.Close();
+            Application.OpenForms["Hr_Dash"]?.Show();
         }
+
+         
     }
 }

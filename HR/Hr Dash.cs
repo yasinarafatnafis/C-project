@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace C__project
+namespace C__project.HR
 {
     public partial class Hr_Dash : Form
     {
@@ -16,119 +18,100 @@ namespace C__project
         {
             InitializeComponent();
 
-            // Unsubscribe first to avoid duplicate handlers (can happen if constructor
-            // is called more than once during designer operations). Then subscribe.
-            this.button1.Click -= this.button1_Click;
-            this.button1.Click += this.button1_Click;
+            
+        }
+        private void LoadHome()
+        {
+            panelContent.Controls.Clear();
 
-            this.button3.Click -= this.button3_Click;
-            this.button3.Click += this.button3_Click;
+            Label lbl = new Label();
+            lbl.Text = "Welcome to HR Dashboard";
+            lbl.Dock = DockStyle.Fill;
+            lbl.TextAlign = ContentAlignment.MiddleCenter;
+            lbl.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            lbl.ForeColor = Color.Black;
 
-            this.button4.Click -= this.button4_Click;
-            this.button4.Click += this.button4_Click;
-
-            this.button5.Click -= this.button5_Click;
-            this.button5.Click += this.button5_Click;
+            panelContent.Controls.Add(lbl);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Register_employee: reuse instance, hide dashboard while it's open,
-            // and show dashboard again when register form closes.
-            if (_regForm != null && !_regForm.IsDisposed)
-            {
-                _regForm.BringToFront();
-                return;
-            }
 
-            // Create a new Register_employee, hide the HR dashboard while it's open,
-            // and show the dashboard again when the register form is closed.
-            _regForm = new Register_employee();
-            _regForm.FormClosed += (s, args) =>
-            {
-                _regForm = null;
+        private void RegForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Cleanup reference and show dashboard again
+            _regForm = null;
+            if (!this.IsDisposed)
                 this.Show();
-            };
-
-            this.Hide();
-            _regForm.Show(this); // non-modal, owned by HR dashboard
         }
 
-        private void button3_Click(object sender, EventArgs e)
+       
+        private void guna2Button2_Click(object sender, EventArgs e) 
         {
-            // Open Notice as a modal dialog so user returns to HR dashboard after closing
-            using (var noticeForm = new Notice())
-            {
-                noticeForm.ShowDialog(this);
-            }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e) { }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e) 
         {
-            // Open View_Order as a modal dialog so user returns to HR dashboard after closing
-            using (var viewOrder = new View_Order())
-            {
-                viewOrder.ShowDialog(this);
-            }
+
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e) { }
+
+        private void guna2Button1_Click(object sender, EventArgs e) 
         {
-            // Prevent re-entrancy / multiple message boxes
-            if (_logoutInProgress)
-                return;
+            panelContent.Controls.Clear();
 
-            _logoutInProgress = true;
-            this.button5.Enabled = false;
+            UC_RegisterEmployee uc = new UC_RegisterEmployee();
+            uc.Dock = DockStyle.Fill;
 
-            try
-            {
-                var confirm = MessageBox.Show(
-                    "Are you sure you want to log out?",
-                    "Confirm",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question,
-                    MessageBoxDefaultButton.Button2);
-
-                if (confirm == DialogResult.Yes)
-                {
-                    // Close any child windows owned by the dashboard to avoid orphan windows
-                    try
-                    {
-                        if (_regForm != null && !_regForm.IsDisposed)
-                            _regForm.FormClosed -= null; // no-op safe detach intent
-                    }
-                    catch { /* ignore cleanup errors */ }
-
-                    // Try to find an existing Log_in form (reuse) to avoid creating multiples
-                    var existingLogin = Application.OpenForms.OfType<Log_in>().FirstOrDefault();
-                    if (existingLogin != null)
-                    {
-                        existingLogin.Show();
-                        existingLogin.BringToFront();
-                    }
-                    else
-                    {
-                        var login = new Log_in();
-                        login.Show();
-                    }
-
-                    // Close this dashboard (this will dispose it)
-                    this.Close();
-                }
-            }
-            finally
-            {
-                // If the form is still open (user said No), re-enable the button and clear guard.
-                if (!this.IsDisposed)
-                {
-                    this.button5.Enabled = true;
-                    _logoutInProgress = false;
-                }
-            }
+            panelContent.Controls.Add(uc);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void guna2Button3_Click(object sender, EventArgs e) { }
+
+        private void guna2Button4_Click(object sender, EventArgs e) 
+        {
+           
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e) { }
+
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Hr_Dash_Load(object sender, EventArgs e)
+        {
+            LoadHome();
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
