@@ -16,5 +16,26 @@ namespace C__project
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Act like a "Back" button:
+            // - If this form has an owner that was hidden, show it again.
+            // - Close this form so control returns to the owner (or previous screen).
+            if (this.Owner != null && !this.Owner.IsDisposed)
+            {
+                try
+                {
+                    this.Owner.Show();
+                    this.Owner.BringToFront();
+                }
+                catch
+                {
+                    // ignore any error restoring owner
+                }
+            }
+
+            this.Close();
+        }
     }
 }
