@@ -1,6 +1,6 @@
 ﻿namespace C__project
 {
-    partial class Hr_Dash
+    partial class Hr_Dash 
     {
         /// <summary>
         /// Required designer variable.
@@ -38,10 +38,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(88, 85);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(66, 95);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 54);
+            this.button1.Size = new System.Drawing.Size(166, 44);
             this.button1.TabIndex = 0;
             this.button1.Text = "Register New Employee";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,10 +48,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(98, 221);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(68, 195);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 54);
+            this.button2.Size = new System.Drawing.Size(166, 44);
             this.button2.TabIndex = 1;
             this.button2.Text = "Salary and Bonus";
             this.button2.UseVisualStyleBackColor = true;
@@ -60,10 +58,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(98, 283);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(66, 245);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(213, 54);
+            this.button3.Size = new System.Drawing.Size(168, 44);
             this.button3.TabIndex = 2;
             this.button3.Text = "Create a Notice";
             this.button3.UseVisualStyleBackColor = true;
@@ -71,10 +68,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(88, 376);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(66, 295);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 54);
+            this.button4.Size = new System.Drawing.Size(166, 44);
             this.button4.TabIndex = 3;
             this.button4.Text = "View Orders";
             this.button4.UseVisualStyleBackColor = true;
@@ -82,10 +78,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(991, 594);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Location = new System.Drawing.Point(712, 463);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 28);
+            this.button5.Size = new System.Drawing.Size(106, 43);
             this.button5.TabIndex = 4;
             this.button5.Text = "Log Out";
             this.button5.UseVisualStyleBackColor = true;
@@ -93,26 +88,24 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(88, 159);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Location = new System.Drawing.Point(66, 145);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(229, 54);
+            this.button6.Size = new System.Drawing.Size(166, 44);
             this.button6.TabIndex = 5;
             this.button6.Text = "Employee applications";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // Hr_Dash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 679);
+            this.ClientSize = new System.Drawing.Size(868, 552);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Hr_Dash";
             this.Text = "Hr_Dash";
             this.ResumeLayout(false);
