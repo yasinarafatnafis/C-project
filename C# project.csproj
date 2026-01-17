@@ -126,6 +126,12 @@
     <Compile Include="HR\View Order.Designer.cs">
       <DependentUpon>View Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProfile.Designer.cs">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Client\Client Dash.resx">
       <DependentUpon>Client Dash.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,7 +174,9 @@
     <EmbeddedResource Include="HR\View Order.resx">
       <DependentUpon>View Order.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <EmbeddedResource Include="UpdateProfile.resx">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
