@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace C__project
 {
-    public partial class Notice_Board : Form
+    public partial class UpdateProfile : Form
     {
-        public Notice_Board()
+        public UpdateProfile()
         {
             InitializeComponent();
-        }
-
-        private void bBack_Click(object sender, EventArgs e)
-        {
-            Employee_Dash ed = new Employee_Dash();
-            ed.Show();
-            this.Hide();
         }
     }
 }

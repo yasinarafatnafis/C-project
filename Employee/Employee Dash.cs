@@ -16,5 +16,19 @@ namespace C__project
         {
             InitializeComponent();
         }
+
+        private void bNotice_Click(object sender, EventArgs e)
+        {
+            Notice_Board nb = new Notice_Board();   
+            nb.Show();
+            this.Hide();
+        }
+
+        private void bProfile_Click(object sender, EventArgs e)
+        {
+            UpdateProfile up = new UpdateProfile();
+            up.Show();
+            this.Hide();
+        }
     }
 }
